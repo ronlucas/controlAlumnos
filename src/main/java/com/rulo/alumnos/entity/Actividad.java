@@ -2,6 +2,7 @@ package com.rulo.alumnos.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -16,10 +17,13 @@ public class Actividad implements Serializable {
 
 	@Id
 	@GeneratedValue
+	@Column
 	private Long id;
 
+	@Column
 	private Integer nroActividad;
 
+	@Column
 	private boolean aprobado;
 
 	public Long getId() {

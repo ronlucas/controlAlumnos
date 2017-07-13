@@ -3,9 +3,11 @@ package com.rulo.alumnos.entity;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity(name = "ALUMNO")
 public class Alumno implements Serializable {
@@ -17,20 +19,28 @@ public class Alumno implements Serializable {
 
 	@Id
 	@GeneratedValue
+	@Column
 	private Long id;
 
+	@Column
 	private String apellido;
 
+	@Column
 	private String nombre;
 
+	@Column
 	private String dni;
 
+	@OneToMany(mappedBy = "id")
 	private List<Actividad> actividades;
 
+	@Column
 	private Integer cantCursadas;
 
+	@Column
 	private String carrera;
 
+	@OneToMany(mappedBy = "id")
 	private List<Nota> notas;
 
 	public Long getId() {

@@ -3,7 +3,10 @@ package com.rulo.alumnos.entity;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity(name = "NOTA")
 public class Nota implements Serializable {
@@ -13,12 +16,18 @@ public class Nota implements Serializable {
 	 */
 	private static final long serialVersionUID = 9219778562910564699L;
 
+	@Id
+	@GeneratedValue
+	@Column
 	private Long id;
 
+	@Column
 	private Integer nota;
 
+	@Column
 	private Date fechaExamen;
 
+	@Column
 	private String instancia;
 
 	public Long getId() {
