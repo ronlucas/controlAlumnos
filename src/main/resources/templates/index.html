@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org">
-	
+
 <head th:fragment="header">
-<meta charset="utf-8"/>
-<title th:text="#{home.title}"></title>
+<meta charset="utf-8" />
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-	<h1 th:text="#{home.title}"></h1>
+	<div th:replace="fragments/header::header">Header</div>
+	<div class="container">
+		<div class="hero-unit">
+			<h1 th:text="#{home.title}"></h1>
+			<p>Esto es una prueba de thymeleaf.</p>
+			<p>
+				<a href="/signup" th:href="@{/signup}"
+					class="btn btn-large btn-success">Sign up</a>
+			</p>
+		</div>
+		<div th:replace="fragments/footer :: footer">Footer</div>
+	</div>
+	<script src="static/js/bootstrap.min.js"></script>
 </body>
 </html>
