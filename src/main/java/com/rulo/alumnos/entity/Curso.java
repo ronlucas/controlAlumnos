@@ -10,14 +10,14 @@ import javax.persistence.Id;
 @Entity
 public class Curso implements Serializable {
 
+	
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -5811797577965432110L;
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue
-	@Column
 	private Long id;
 
 	@Column

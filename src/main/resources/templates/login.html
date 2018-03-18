@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+<link href="css/login.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+	<div class="container">
+		<form action="algunaAction">
+			<div class="imgcontainer">
+<!-- 				<img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
+			</div>
+
+			<div class="container">
+				<label for="uname"><b>Username</b></label> 
+				<input type="text" placeholder="Enter Username" name="uname" th:required="required"/> 
+				<label for="psw"><b>Password</b></label> <input type="password"
+					placeholder="Enter Password" name="psw" th:required="required"/>
+				<button type="submit">Login</button>
+				<label> <input type="checkbox" checked="checked"
+					name="remember"/> Remember me
+				</label>
+			</div>
+
+			<div class="container-cancel">
+				<button type="button" class="cancelbtn">Cancel</button>
+				<span class="psw">Forgot <a href="#">password?</a></span>
+			</div>
+		</form>
+		<div th:replace="fragments/footer :: footer">Footer</div>
+	</div>
+</body>
+</html>

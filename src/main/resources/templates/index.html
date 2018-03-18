@@ -8,10 +8,11 @@
 	<!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
 	<div class="container">
 		<div class="hero-unit">
-			<p>Esto es una prueba de thymeleaf.</p>
+		<h1>Control de Alumnos</h1>
+			<p>Loguearse para disfrutar del control.</p>
 			<p>
-				<a href="/signup" th:href="@{/signup}"
-					class="btn btn-large btn-success">Sign up</a>
+				<a href="/login" th:href="@{/login}"
+					class="btn btn-large btn-success">Log in</a>
 			</p>
 		</div>
 		<div th:replace="fragments/footer :: footer">Footer</div>

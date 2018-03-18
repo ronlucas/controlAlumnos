@@ -23,6 +23,7 @@ public class AlumnoController {
 
 	@RequestMapping(method=RequestMethod.GET, value = "/alumnos")
 	public String alumnos() {
+		//TODO devolver una pagina en serio
 		return "alumnos";
 	}
 }
