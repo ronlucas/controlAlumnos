@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+	<div th:fragment="header">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<a class="navbar-brand" href="#"> <img th:src="@{/images/sclogo.png}" width="30" height="30"
+				class="d-inline-block align-top" alt=""/> StudentCampus</a>
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-dark-toggler-icon"></span>
+			</button>
+			<div class="navbar-collapse collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class = "nav-item" th:classappend="${module == 'home' ? 'active' : ''}"><a
+						href="#" th:href="@{/}">Home </a></li>
+					<li class = "nav-item" th:classappend="${module == 'cursos' ? 'active' : ''}"><a
+						href="#" th:href="@{/cursos}">Cursos </a></li>
+					<li class = "nav-item" th:classappend="${module == 'alumnos' ? 'active' : ''}"><a
+						href="#" th:href="@{/alumnos}">Alumnos </a></li>
+					<li class = "nav-item" th:classappend="${module == 'actividades' ? 'active' : ''}"><a
+						href="#" th:href="@{/actividades}">Actividades </a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+				</ul>
+			</div>
+		</nav>
+	</div>
+</body>
+</html>

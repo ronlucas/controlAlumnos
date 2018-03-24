@@ -2,26 +2,29 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-<!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+<!--/*/ <th:block th:include="fragments/header/headerinc :: head"></th:block> /*/-->
 <link href="css/login.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-	<!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+	<!--/*/ <th:block th:include="fragments/header/header :: header"></th:block> /*/-->
 	<div class="container">
 		<form action="algunaAction">
-			<div class="imgcontainer">
-<!-- 				<img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
+			<div class="form-group">
+				<label for="uname"><b>Username</b></label> <input type="text"
+					placeholder="Enter Username" name="uname" th:required="required" />
 			</div>
-
-			<div class="container">
-				<label for="uname"><b>Username</b></label> 
-				<input type="text" placeholder="Enter Username" name="uname" th:required="required"/> 
+			<div class="form-group">
 				<label for="psw"><b>Password</b></label> <input type="password"
-					placeholder="Enter Password" name="psw" th:required="required"/>
+					placeholder="Enter Password" name="psw" th:required="required" />
+			</div>
+			<div class="form-group">
 				<button type="submit">Login</button>
-				<label> <input type="checkbox" checked="checked"
-					name="remember"/> Remember me
-				</label>
+			</div>
+			<div class="form-check">
+				<input type="checkbox" class="form-check-input" checked="checked"
+					name="remember" id="checkRememberMe" /> <label
+					class="form-check-label" for="checkRememberMe"> Remember
+					me </label>
 			</div>
 
 			<div class="container-cancel">

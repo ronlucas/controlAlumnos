@@ -3,6 +3,9 @@
  */
 package com.rulo.alumnos.controller;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +15,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.rulo.alumnos.builder.UserFactory;
+import com.rulo.alumnos.entity.user.Role;
 import com.rulo.alumnos.entity.user.User;
+import com.rulo.alumnos.service.RoleService;
 import com.rulo.alumnos.service.UserService;
 
 /**
@@ -23,11 +29,14 @@ import com.rulo.alumnos.service.UserService;
 public class LoginController {
 
 	private UserService userService;
+	
+	private RoleService roleService;
 
 	@Autowired
-	public LoginController(UserService userService) {
+	public LoginController(UserService userService, RoleService roleService) {
 		super();
 		this.userService = userService;
+		this.roleService = roleService;
 	}
 
 	@RequestMapping(method = RequestMethod.GET, value = "/login")
@@ -57,6 +66,8 @@ public class LoginController {
 		if (bindingResult.hasErrors()) {
 			modelAndView.setViewName("registration");
 		} else {
+			user.setRoles(new HashSet<Role>());
+			user.getRoles().add(roleService.findByRole("ADMIN"));
 			userService.saveUser(user);
 			modelAndView.addObject("successMessage", "User has been registered successfully");
 			modelAndView.addObject("user", new User());

@@ -2,13 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-<!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+<!--/*/ <th:block th:include="fragments/header/headerinc :: head"></th:block> /*/-->
 </head>
 <body>
-	<!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+	<!--/*/ <th:block th:include="fragments/header/header :: header"></th:block> /*/-->
 	<div class="container">
 		<div class="hero-unit">
-		<h1>Control de Alumnos</h1>
+			<h1>Control de Alumnos</h1>
 			<p>Loguearse para disfrutar del control.</p>
 			<p>
 				<a href="/login" th:href="@{/login}"
@@ -19,7 +19,8 @@
 					class="btn btn-large btn-success">Sign up</a>
 			</p>
 		</div>
-		<div th:replace="fragments/footer :: footer">Footer</div>
+		<!--/*/ <th:block th:include="fragments/footer :: footer"></th:block> /*/-->
+
 	</div>
 </body>
 </html>

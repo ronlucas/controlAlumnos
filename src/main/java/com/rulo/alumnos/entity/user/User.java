@@ -35,7 +35,7 @@ public class User implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "id")
+	@Column(name = "user_id")
 	private int id;
 	@Column(name = "email")
 	@Email(message = "Please provide a valid Email")
