@@ -4,7 +4,7 @@
 	xmlns:th="http://www.thymeleaf.org">
 <head>
 <title>Registration Form</title>
-<!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+<!--/*/ <th:block th:include="fragments/header/headerinc :: head"></th:block> /*/-->
 
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
@@ -14,7 +14,7 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+	<!--/*/ <th:block th:include="fragments/header/header :: header"></th:block> /*/-->
 
 	<form th:action="@{/login}" method="get">
 		<button class="btn btn-md btn-warning btn-block" type="Submit">Go
