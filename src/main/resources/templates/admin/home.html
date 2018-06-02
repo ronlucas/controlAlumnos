@@ -9,24 +9,32 @@
 
 <body>
 	<!--/*/ <th:block th:include="fragments/header/header :: header"></th:block> /*/-->
-	<div class="container">
+	<div class="wrapper">
 
-		<form th:action="@{/logout}" method="get">
-			<button class="btn btn-md btn-danger btn-block" name="registration"
-				type="Submit">Logout</button>
-		</form>
+		<!-- Sidebar -->
+		<nav id="sidebar">...</nav>
 
-		<div class="panel-group" style="margin-top: 40px">
-			<div class="panel panel-primary">
-				<div class="panel-heading">
-					<span th:utext="${userName}"></span>
-				</div>
-
-				<p class="admin-message-text text-center" th:utext="${adminMessage}"></p>
-			</div>
+		<!-- Page Content -->
+		<div id="content">
+			<!-- We'll fill this with dummy content -->
 		</div>
-		<!--/*/ <th:block th:include="fragments/footer :: footer"></th:block> /*/-->
 
 	</div>
+
+	<form th:action="@{/logout}" method="get">
+		<button class="btn btn-md btn-danger btn-block" name="registration"
+			type="Submit">Logout</button>
+	</form>
+
+	<div class="panel-group" style="margin-top: 40px">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<span th:utext="${userName}"></span>
+			</div>
+
+			<p class="admin-message-text text-center" th:utext="${adminMessage}"></p>
+		</div>
+	</div>
+	<!--/*/ <th:block th:include="fragments/footer :: footer"></th:block> /*/-->
 </body>
 </html>
