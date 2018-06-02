@@ -1,5 +1,9 @@
 package com.rulo.alumnos.entity;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.io.Serializable;
 
 import javax.persistence.Column;
@@ -7,13 +11,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+@NoArgsConstructor
+@Getter
+@Setter
 @Entity
 public class Curso implements Serializable {
-
-	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -22,21 +24,4 @@ public class Curso implements Serializable {
 
 	@Column
 	private Integer cantAlumnos;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public Integer getCantAlumnos() {
-		return cantAlumnos;
-	}
-
-	public void setCantAlumnos(Integer cantAlumnos) {
-		this.cantAlumnos = cantAlumnos;
-	}
-
 }
