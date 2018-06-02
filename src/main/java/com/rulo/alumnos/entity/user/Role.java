@@ -1,7 +1,8 @@
-/**
- * 
- */
 package com.rulo.alumnos.entity.user;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.io.Serializable;
 
@@ -16,6 +17,9 @@ import javax.persistence.Table;
  * @author ronlucas
  *
  */
+@NoArgsConstructor
+@Getter
+@Setter
 @Entity
 @Table(name = "role_login")
 public class Role implements Serializable {
@@ -28,21 +32,4 @@ public class Role implements Serializable {
 	private int id;
 	@Column(name = "role")
 	private String role;
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getRole() {
-		return role;
-	}
-
-	public void setRole(String role) {
-		this.role = role;
-	}
-
 }
