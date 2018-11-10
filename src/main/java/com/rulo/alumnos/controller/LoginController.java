@@ -67,7 +67,7 @@ public class LoginController {
 			modelAndView.setViewName("registration");
 		} else {
 			user.setRoles(new HashSet<Role>());
-			user.getRoles().add(roleService.findByRole("ADMIN"));
+			user.getRoles().add(roleService.findByRole("USER	"));
 			userService.saveUser(user);
 			modelAndView.addObject("successMessage", "User has been registered successfully");
 			modelAndView.addObject("user", new User());

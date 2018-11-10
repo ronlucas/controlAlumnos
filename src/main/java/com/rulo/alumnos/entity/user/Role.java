@@ -1,5 +1,6 @@
 package com.rulo.alumnos.entity.user;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -17,9 +18,7 @@ import javax.persistence.Table;
  * @author ronlucas
  *
  */
-@NoArgsConstructor
-@Getter
-@Setter
+@Data
 @Entity
 @Table(name = "role_login")
 public class Role implements Serializable {

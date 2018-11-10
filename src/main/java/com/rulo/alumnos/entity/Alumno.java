@@ -1,5 +1,6 @@
 package com.rulo.alumnos.entity;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,9 +14,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-@Getter
-@Setter
-@NoArgsConstructor
+@Data
 @Entity(name = "ALUMNO")
 public class Alumno implements Serializable {
 
