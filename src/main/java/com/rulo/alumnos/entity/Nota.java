@@ -17,19 +17,13 @@ import javax.persistence.Id;
 @Getter
 @Entity(name = "NOTA")
 public class Nota implements Serializable {
-	private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue
-	@Column
-	private Long id;
+  @Id @GeneratedValue @Column private Long id;
 
-	@Column
-	private Integer nota;
+  @Column private Integer nota;
 
-	@Column
-	private Date fechaExamen;
+  @Column private Date fechaExamen;
 
-	@Column
-	private String instancia;
+  @Column private String instancia;
 }

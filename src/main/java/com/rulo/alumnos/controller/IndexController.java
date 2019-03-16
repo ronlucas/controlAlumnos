@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class IndexController {
 
-	private Logger log = LoggerFactory.getLogger(IndexController.class);
+  private Logger log = LoggerFactory.getLogger(IndexController.class);
 
-	@RequestMapping(value = "/")
-	public String index() {
-		return "index";
-	}
+  @RequestMapping(value = "/")
+  public String index() {
+    return "index";
+  }
 }

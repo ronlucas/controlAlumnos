@@ -14,16 +14,16 @@ import com.rulo.alumnos.service.AlumnoService;
 @Controller
 public class AlumnoController {
 
-	private AlumnoService alumnoService;
+  private AlumnoService alumnoService;
 
-	@Autowired
-	public AlumnoController(AlumnoService alumnoService) {
-		this.alumnoService = alumnoService;
-	}
+  @Autowired
+  public AlumnoController(AlumnoService alumnoService) {
+    this.alumnoService = alumnoService;
+  }
 
-	@RequestMapping(method=RequestMethod.GET, value = "/alumnos")
-	public String alumnos() {
-		//TODO devolver una pagina en serio
-		return "alumnos";
-	}
+  @RequestMapping(method = RequestMethod.GET, value = "/alumnos")
+  public String alumnos() {
+    // TODO devolver una pagina en serio
+    return "alumnos";
+  }
 }

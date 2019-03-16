@@ -16,12 +16,9 @@ import javax.persistence.Id;
 @Setter
 @Entity
 public class Curso implements Serializable {
-	private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue
-	private Long id;
+  @Id @GeneratedValue private Long id;
 
-	@Column
-	private Integer cantAlumnos;
+  @Column private Integer cantAlumnos;
 }

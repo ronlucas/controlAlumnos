@@ -8,5 +8,5 @@ import com.rulo.alumnos.entity.Nota;
 
 public interface NotaRepository extends CrudRepository<Nota, Long> {
 
-	List<Nota> findAll();
+  List<Nota> findAll();
 }

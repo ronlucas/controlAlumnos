@@ -19,34 +19,24 @@ import javax.persistence.OneToMany;
 @Entity(name = "ALUMNO")
 public class Alumno implements Serializable {
 
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -4618452935207488120L;
+  /** */
+  private static final long serialVersionUID = -4618452935207488120L;
 
-	@Id
-	@GeneratedValue
-	@Column
-	private Long id;
+  @Id @GeneratedValue @Column private Long id;
 
-	@Column
-	private String apellido;
+  @Column private String apellido;
 
-	@Column
-	private String nombre;
+  @Column private String nombre;
 
-	@Column
-	private String dni;
+  @Column private String dni;
 
-	@OneToMany(mappedBy = "id")
-	private List<Actividad> actividades;
+  @OneToMany(mappedBy = "id")
+  private List<Actividad> actividades;
 
-	@Column
-	private Integer cantCursadas;
+  @Column private Integer cantCursadas;
 
-	@Column
-	private String carrera;
+  @Column private String carrera;
 
-	@OneToMany(mappedBy = "id")
-	private List<Nota> notas;
+  @OneToMany(mappedBy = "id")
+  private List<Nota> notas;
 }

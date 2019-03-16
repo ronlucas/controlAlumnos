@@ -17,17 +17,10 @@ import javax.persistence.Id;
 @Entity(name = "ACTIVIDAD")
 public class Actividad implements Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 9187546039184564336L;
+  /** */
+  private static final long serialVersionUID = 9187546039184564336L;
 
-	@Id
-	@GeneratedValue
-	@Column
-	private Long id;
-	@Column
-	private Integer nroActividad;
-	@Column
-	private boolean aprobado;
+  @Id @GeneratedValue @Column private Long id;
+  @Column private Integer nroActividad;
+  @Column private boolean aprobado;
 }

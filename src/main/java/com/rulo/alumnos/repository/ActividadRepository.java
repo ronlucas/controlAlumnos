@@ -8,5 +8,5 @@ import com.rulo.alumnos.entity.Actividad;
 
 public interface ActividadRepository extends CrudRepository<Actividad, Long> {
 
-	List<Actividad> findAll();
+  List<Actividad> findAll();
 }
