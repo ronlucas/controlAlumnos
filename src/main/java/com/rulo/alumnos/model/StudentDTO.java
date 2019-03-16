@@ -9,14 +9,14 @@ import lombok.extern.slf4j.Slf4j;
 @Getter
 @Setter
 @Slf4j
-public class AlumnoDTO {
+public class StudentDTO {
 
   private Long id;
-  private String apellido;
-  private String nombre;
-  private String dni;
-  private Integer cantCursadas;
-  private String carrera;
+  private String lastName;
+  private String firstName;
+  private String documentId;
+  private Integer coursesAmount;
+  private String career;
   //	private List<Actividad> actividades;
   //	private List<Nota> notas;
 }

@@ -16,8 +16,8 @@ import javax.persistence.OneToMany;
 @Getter
 @Setter
 @NoArgsConstructor
-@Entity(name = "ALUMNO")
-public class Alumno implements Serializable {
+@Entity(name = "STUDENT")
+public class Student implements Serializable {
 
   /** */
   private static final long serialVersionUID = -4618452935207488120L;
