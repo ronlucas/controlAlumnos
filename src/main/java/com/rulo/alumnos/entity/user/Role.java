@@ -13,10 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- * @author ronlucas
- *
- */
+/** @author ronlucas */
 @NoArgsConstructor
 @Getter
 @Setter
@@ -24,12 +21,13 @@ import javax.persistence.Table;
 @Table(name = "role_login")
 public class Role implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "role_id")
-	private int id;
-	@Column(name = "role")
-	private String role;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "role_id")
+  private int id;
+
+  @Column(name = "role")
+  private String role;
 }

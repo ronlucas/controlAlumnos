@@ -10,13 +10,13 @@ import lombok.extern.slf4j.Slf4j;
 @Setter
 @Slf4j
 public class AlumnoDTO {
-	
-	private Long id;
-	private String apellido;
-	private String nombre;
-	private String dni;
-	private Integer cantCursadas;
-	private String carrera;
-//	private List<Actividad> actividades;
-//	private List<Nota> notas;
+
+  private Long id;
+  private String apellido;
+  private String nombre;
+  private String dni;
+  private Integer cantCursadas;
+  private String carrera;
+  //	private List<Actividad> actividades;
+  //	private List<Nota> notas;
 }

@@ -8,7 +8,5 @@ import com.rulo.alumnos.entity.Alumno;
 
 public interface AlumnoRepository extends CrudRepository<Alumno, Long> {
 
-	List<Alumno> findAll();
-	
-	
+  List<Alumno> findAll();
 }

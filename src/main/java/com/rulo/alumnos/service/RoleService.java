@@ -1,14 +1,9 @@
-/**
- * 
- */
+/** */
 package com.rulo.alumnos.service;
 
 import com.rulo.alumnos.entity.user.Role;
 
-/**
- * @author ronlucas
- *
- */
+/** @author ronlucas */
 public interface RoleService {
-	Role findByRole(String role);
+  Role findByRole(String role);
 }

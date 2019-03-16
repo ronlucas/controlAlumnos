@@ -12,17 +12,17 @@ import com.rulo.alumnos.repository.AlumnoRepository;
 @Service
 public class AlumnoService {
 
-	private AlumnoRepository alumnoRepository;
+  private AlumnoRepository alumnoRepository;
 
-	@Autowired
-	public AlumnoService(AlumnoRepository alumnoRepository) {
-		this.alumnoRepository = alumnoRepository;
-	}
+  @Autowired
+  public AlumnoService(AlumnoRepository alumnoRepository) {
+    this.alumnoRepository = alumnoRepository;
+  }
 
-	public List<AlumnoDTO> getAllAlumnos() {
-		//TODO completar el mapeador
-		List<Alumno> alumnos = alumnoRepository.findAll();
+  public List<AlumnoDTO> getAllAlumnos() {
+    // TODO completar el mapeador
+    List<Alumno> alumnos = alumnoRepository.findAll();
 
-		return null;
-	}
+    return null;
+  }
 }
